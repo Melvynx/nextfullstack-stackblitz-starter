@@ -1,0 +1,18 @@
+{
+  "Not Found Page": {
+    "prefix": "nerr",
+    "description": "Create a error page template",
+    "scope": "typescriptreact",
+    "body": [
+      "\"use client\";",
+      "",
+      "export default function NotFoundPage() {",
+      "  return (",
+      "    <div className=\"relative flex min-h-screen flex-col\">",
+      "      $1",
+      "    </div>",
+      "  );",
+      "}"
+    ]
+  }
+}
