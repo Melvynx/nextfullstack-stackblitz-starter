@@ -1,21 +1,9 @@
-import PathnameBreadcrumb from "@/components/navigation/pathname-breadcrumb";
 import { Header } from "@/components/navigation/header";
+import PathnameBreadcrumb from "@/components/navigation/pathname-breadcrumb";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -29,13 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <body
-        className={cn(
-          "h-full bg-background font-sans antialiased",
-          geistSans.variable,
-          geistMono.variable
-        )}
-      >
+      <body className={cn("h-full bg-background font-sans antialiased")}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
